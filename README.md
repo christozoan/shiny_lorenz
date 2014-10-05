@@ -3,7 +3,9 @@ R/shiny application computes and plots Lorenz system of differential equations, 
 To run from R:
 
 install.packages(c("shiny","rgl","shinyRGL"))
+
 library(shiny)
+
 runApp("/path to lorenz_shiny folder")
 
 
