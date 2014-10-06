@@ -59,14 +59,14 @@ shinyUI(fluidPage(
                       )
       ),
       
-      conditionalPanel("input.cage==true", 
-                        img(src="cage.jpg")),
+   #   conditionalPanel("input.cage==true", 
+   #                     img(src="cage.jpg")),
       HTML("<br>"),
       helpText("Plot color"),
       sliderInput("R", "Red", value=0, min=0, max=255, step=1),
       sliderInput("G", "Green", value=0,min=0,max=255, step=1),
       sliderInput("B", "Blue", value=255,min=0, max=255, step=1),
-      sliderInput("A", "Alpha", value=255,min=0, max=255, step=1),
+#      sliderInput("A", "Alpha", value=255,min=0, max=255, step=1),
       HTML("<br>"),
       checkboxInput("cage",
                     "Leave this box unchecked", 
@@ -75,11 +75,11 @@ shinyUI(fluidPage(
   
     mainPanel(
 
+        #conditionalPanel("input.threeD==true",
+        #    webGLOutput("lorenzPlot3d", width = 650, height = 650)
+        #),
         conditionalPanel("input.threeD==false",
             plotOutput("lorenzPlot2d", width = 600, height = 600)
-        ),
-        conditionalPanel("input.threeD==true",
-            webGLOutput("lorenzPlot3d", width = 650, height = 650)
         )
         
     )

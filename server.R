@@ -50,7 +50,7 @@ shinyServer(function(input, output) {
     })
     
     color = reactive({
-        rgb(input$R, input$G, input$B, input$A,
+        rgb(input$R, input$G, input$B,# input$A,
             maxColorValue = 255) 
     })
     
